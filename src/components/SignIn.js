@@ -14,8 +14,9 @@ const SignIn = () => {
             "password":password
         }
         axios.post("http://3.112.48.67/login-user", data).then((data) => {
+          console.log(data);
             localStorage.setItem("token", data.data.data.token);
-            localStorage.setItem("userId", data.data.data.user._id);
+            localStorage.setItem("userId", data.data.data.user.id);
             localStorage.setItem("name", data.data.data.user.name);
             navigate('/Orders');
         })
