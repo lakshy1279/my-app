@@ -28,7 +28,7 @@ const SignUp = () => {
             "name": name,
             "mobile":mobile
         }
-        axios.post('http://localhost:7000/addUser',data).then((data) => {
+        axios.post('http://3.112.48.67/addUser',data).then((data) => {
               console.log(data.data.data.token);
               localStorage.setItem("token", data.data.data.token);
               localStorage.setItem("userId", data.data.data.user._id);

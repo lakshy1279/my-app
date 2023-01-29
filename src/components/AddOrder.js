@@ -19,7 +19,7 @@ const AddOrder = () => {
             "sub_total":total,
             "name": orderName
         }
-        axios.post('http://localhost:7000/add-order',data, config).then((data) => {
+        axios.post('http://3.112.48.67/add-order',data, config).then((data) => {
               console.log(data);
               navigate('/Orders');
         })

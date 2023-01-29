@@ -13,7 +13,7 @@ const SignIn = () => {
             "mobile":mobile,
             "password":password
         }
-        axios.post("http://localhost:7000/login-user", data).then((data) => {
+        axios.post("http://3.112.48.67/login-user", data).then((data) => {
             localStorage.setItem("token", data.data.data.token);
             localStorage.setItem("userId", data.data.data.user._id);
             localStorage.setItem("name", data.data.data.user.name);

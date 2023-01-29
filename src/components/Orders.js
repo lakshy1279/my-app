@@ -10,7 +10,7 @@ const Orders = () => {
         }
       }
     useEffect(() => {
-      axios.get('http://localhost:7000/get-order/63d4f97c8b9bc79d13354d76', config).then((data) =>{
+      axios.get('http://3.112.48.67/get-order/63d4f97c8b9bc79d13354d76', config).then((data) =>{
          console.log(data.data.data.data);
          setOrders(data.data.data.data);
        })
