@@ -51,7 +51,7 @@ const AddOrder = () => {
                 </div>
                 ) : (
                 <div className="field">
-                    <button onClick={(e) => handleFormSubmit(e)}>Sign Up</button>
+                    <button onClick={(e) => handleFormSubmit(e)}>Add Order</button>
                 </div>
                 )}
             </form>

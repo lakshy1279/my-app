@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
+import { Navigate, useNavigate } from "react-router-dom";
 const SignUp = () => {
+    let navigate = useNavigate();
     const [password, setPassword] = useState("");
     const [mobile, setMobile] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -33,6 +35,7 @@ const SignUp = () => {
               localStorage.setItem("token", data.data.data.token);
               localStorage.setItem("userId", data.data.data.user._id);
               localStorage.setItem("name", data.data.data.user.name);
+              navigate('/Orders');
         })
       };
     return (
