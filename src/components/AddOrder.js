@@ -47,7 +47,7 @@ const AddOrder = () => {
                 </div>
                 {inProgress ? (
                 <div className="field">
-                    <button disabled={inProgress}>Sign Up</button>
+                    <button disabled={inProgress}>Add Order</button>
                 </div>
                 ) : (
                 <div className="field">

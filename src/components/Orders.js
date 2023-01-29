@@ -10,7 +10,8 @@ const Orders = () => {
         }
       }
     useEffect(() => {
-      axios.get('http://3.112.48.67/get-order/63d4f97c8b9bc79d13354d76', config).then((data) =>{
+      let id = localStorage.getItem(userId);
+      axios.get(`http://3.112.48.67/get-order/${id}`, config).then((data) =>{
          console.log(data.data.data.data);
          setOrders(data.data.data.data);
        })
